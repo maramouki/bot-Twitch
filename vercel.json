@@ -1,7 +1,6 @@
 {
     "name": "vercel-testing",
-    "version": "1.0.0",
-    "main": "server.js",
+    "version": "1",
     "engines": {
         "node": "14.x"
     },
