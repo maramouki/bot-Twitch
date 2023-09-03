@@ -60,12 +60,6 @@ client.on('message', (channel, tags, message, self) => {
 		client.say(channel, "🌟 Votre personnage choisi est : " + choisirNomAleatoire(tank));
 	} else if (message.toLowerCase() === '!random soutien') {
 		client.say(channel, "🌟 Votre personnage choisi est : " + choisirNomAleatoire(soutien));
-	} else if (message.toLowerCase() === '!site') {
-		client.say(channel, "https://www.twitch.tv/gonzalex_tv");
-	}
+	};
+
 });
-
-
-
-
-// https://id.twitch.tv/oauth2/authorize?client_id=a6kpsf2tgjume6wk63q3ketiiaduj2&redirect_uri=http://localhost:3000&response_type=token&scope=channel:moderate+chat:edit+chat:read
