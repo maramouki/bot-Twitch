@@ -52,16 +52,17 @@ function choisirNomAleatoire(tableau) {
 client.on('message', (channel, tags, message, self) => {
 	// if(self) return;
 
+	console.log(tags);
+	// if (message.toLowerCase() === '!random' && tags['mod'] === true || message.toLowerCase() === '!random' && tags['display-name'] === process.env.TWITCH_CHANNEL_NAME) {
+	// 	client.say(channel, `📝 ${tags['display-name']}, Tu dois choisir une classe [dps, tank, soutien]. ( 🔫 !random dps | 🛡️ !random tank | 💉 !random soutien )`);
+	// }
 
-	if (message.toLowerCase() === '!random') {
-		client.say(channel, `📝 ${tags['display-name']}, Tu dois choisir une classe [dps, tank, soutien]. ( 🔫 !random dps | 🛡️ !random tank | 💉 !random soutien )`);
-	} else if (message.toLowerCase() === '!random dps') {
-		client.say(channel, "🌟 Votre personnage choisi est : " + choisirNomAleatoire(dps));
-	} else if (message.toLowerCase() === '!random tank') {
-		client.say(channel, "🌟 Votre personnage choisi est : " + choisirNomAleatoire(tank));
-	} else if (message.toLowerCase() === '!random soutien') {
-		client.say(channel, "🌟 Votre personnage choisi est : " + choisirNomAleatoire(soutien));
+	if (message.toLowerCase() === '!random dps' && tags['mod'] === true || message.toLowerCase() === '!random dps' && tags['display-name'] === process.env.TWITCH_CHANNEL_NAME) {
+		client.say(channel, "🌟 Le personnage que tu dois jouer est : " + choisirNomAleatoire(dps));
+	} else if (message.toLowerCase() === '!random tank' && tags['mod'] === true || message.toLowerCase() === '!random tank' && tags['display-name'] === process.env.TWITCH_CHANNEL_NAME) {
+		client.say(channel, "🌟 Le personnage que tu dois jouer est : " + choisirNomAleatoire(tank));
+	} else if (message.toLowerCase() === '!random soutien' && tags['mod'] === true || message.toLowerCase() === '!random soutien' && tags['display-name'] === process.env.TWITCH_CHANNEL_NAME) {
+		client.say(channel, "🌟 Le personnage que tu dois jouer est : " + choisirNomAleatoire(soutien));
 	};
-
 });
 
