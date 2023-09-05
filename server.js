@@ -1,6 +1,4 @@
 require('dotenv').config();
-const express = require('express')
-const app = express()
 
 
 
@@ -11,7 +9,6 @@ const app = express()
 */
 
 const tmi = require('tmi.js');
-const port = 5000
 const client = new tmi.Client({
 	options: { debug: true },
 	identity: {
@@ -66,7 +63,5 @@ client.on('message', (channel, tags, message, self) => {
 		client.say(channel, "🌟 Votre personnage choisi est : " + choisirNomAleatoire(soutien));
 	};
 
-});
-// Listen on port 5000
-app.listen(process.env.PORT || port, () => console.log(`Listening on port ${port}`))
+}).listen(process.env.PORT || 3000);
 
