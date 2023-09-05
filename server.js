@@ -8,7 +8,7 @@ require('dotenv').config();
 */
 
 const tmi = require('tmi.js');
-
+const port = 5000
 const client = new tmi.Client({
 	options: { debug: true },
 	identity: {
@@ -64,3 +64,6 @@ client.on('message', (channel, tags, message, self) => {
 	};
 
 });
+// Listen on port 5000
+client.listen(process.env.PORT || port, () => console.log(`Listening on port ${port}`))
+
