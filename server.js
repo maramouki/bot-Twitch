@@ -63,5 +63,5 @@ client.on('message', (channel, tags, message, self) => {
 		client.say(channel, "🌟 Votre personnage choisi est : " + choisirNomAleatoire(soutien));
 	};
 
-}).listen(process.env.PORT || 3000);
+});
 
