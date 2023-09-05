@@ -1,4 +1,7 @@
 require('dotenv').config();
+const express = require('express')
+const app = express()
+
 
 
 /*
@@ -65,5 +68,5 @@ client.on('message', (channel, tags, message, self) => {
 
 });
 // Listen on port 5000
-client.listen(process.env.PORT || port, () => console.log(`Listening on port ${port}`))
+app.listen(process.env.PORT || port, () => console.log(`Listening on port ${port}`))
 
