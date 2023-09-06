@@ -1,42 +1,6 @@
-/*
-Fonts Added:
-Work Sans Thin
-font-family: "work-sans", sans-serif;
-font-weight: 100;
-font-style: normal;
-Work Sans ExtraLight
-font-family: "work-sans", sans-serif;
-font-weight: 200;
-font-style: normal;
-Work Sans Light
-font-family: "work-sans", sans-serif;
-font-weight: 300;
-font-style: normal;
-Work Sans Regular
-font-family: "work-sans", sans-serif;
-font-weight: 400;
-font-style: normal;
-Work Sans Medium
-font-family: "work-sans", sans-serif;
-font-weight: 500;
-font-style: normal;
-Work Sans SemiBold
-font-family: "work-sans", sans-serif;
-font-weight: 600;
-font-style: normal;
-Work Sans Bold
-font-family: "work-sans", sans-serif;
-font-weight: 700;
-font-style: normal;
-Work Sans ExtraBold
-font-family: "work-sans", sans-serif;
-font-weight: 800;
-font-style: normal;
-Work Sans Black
-font-family: "work-sans", sans-serif;
-font-weight: 900;
-font-style: normal;
-*/
+html {
+	overflow: hidden;
+}
 
 .username-wrapper {
     background-color: #0E0E0F;
@@ -47,8 +11,8 @@ font-style: normal;
     height: 0;
     transform: rotate(26deg) translate(0, -50%);
     overflow: hidden;
-    animation: lineIn 2s ease-out forwards 1,
-        lineOut 2s ease-out 12s forwards 1;
+    animation: lineIn 1s ease-in-out forwards 1,
+        lineOut 2s ease-in-out 12s forwards 1;
     transition: all 1s;
     display: block;
 }
