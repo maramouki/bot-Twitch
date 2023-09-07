@@ -1,7 +1,6 @@
 require('dotenv').config();
 
 
-
 /*
 *| ------------------------------
 *|	Les Options
@@ -119,9 +118,9 @@ function supprimerAnciens() {
 
 	// Mettre à jour la liste des followers avec ceux qui ne sont pas encore supprimés
 	subList = newSubList;
-
 	console.log('Les anciens Sub ont été supprimés.');
 	console.log(subList);
+	return subList;
 }
 
 /*
